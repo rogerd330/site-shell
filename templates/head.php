@@ -6,6 +6,8 @@
  * 11/15/12 9:59 PM
  */
 
+require_once("includes/functions.php");
+
 $site_name = "Site Shell";
 $page_title = empty($page_title) ? "Home" : $page_title;
 list($page_name, $page_extension) = explode(".", basename($_SERVER["PHP_SELF"]));
