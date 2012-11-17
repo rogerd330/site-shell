@@ -6,14 +6,16 @@
  * 11/15/12 9:59 PM
  */
 
-
+$site_name = "Site Shell";
 $page_title = empty($page_title) ? "Home" : $page_title;
+list($page_name, $page_extension) = explode(".", basename($_SERVER["PHP_SELF"]));
+
 ?>
 <!doctype html>
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title><?php echo $page_title ?></title>
+        <title><?php echo sprintf("%s - %s", $page_title, $site_name) ?></title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lt IE 9]>
@@ -26,4 +28,4 @@ $page_title = empty($page_title) ? "Home" : $page_title;
     </head>
     <body>
 
-    <div class="container_12">
+    <div id="<?php echo $page_name ?>" class="container_12">
