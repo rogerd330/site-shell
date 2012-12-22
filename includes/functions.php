@@ -6,6 +6,32 @@
  * 11/16/12 11:22 PM
  */
 
+function debug($data) {
+    echo "<pre>";
+    var_dump($data);
+    echo "</pre>";
+}
+
+//
+// Call load_models() from any page that needs database access.
+//
+function load_models() {
+    $models = array();
+    // Example: "user" => "UserModel"
+    $load = array(
+        //TODO add your first model.
+    );
+
+    require_once("includes/BaseModel.php");
+
+    foreach ($load as $k => $v) {
+        require_once(sprintf("includes/%s.php", $v));
+        $models[$k] = new $v;
+    }
+
+    return $models;
+}
+
 function enqueue_script($js) {
     Site::addScript($js);
 }
