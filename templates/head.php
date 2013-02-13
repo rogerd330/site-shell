@@ -36,4 +36,4 @@ list($page_name, $page_extension) = explode(".", basename($_SERVER["PHP_SELF"]))
     </head>
     <body>
 
-    <div id="<?php echo $page_name ?>" class="container_12">
+    <div id="<?php echo $page_name ?>" class="container_16">
