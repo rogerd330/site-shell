@@ -18,6 +18,8 @@ list($page_name, $page_extension) = explode(".", basename($_SERVER["PHP_SELF"]))
     <head>
         <meta charset="utf-8"/>
         <title><?php echo sprintf("%s - %s", $page_title, $site_name) ?></title>
+        <link href="favicon.ico" type="image/x-icon" rel="icon" />
+        <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lt IE 9]>
