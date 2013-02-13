@@ -6,6 +6,9 @@
  * 11/15/12 10:05 PM
  */
 
+$page_title = "This is my home page!";
+$meta_description = "This is sample page template.";
+$meta_keywords = "site shell, open source, php framework, really simple";
 include("templates/head.php");
 ?>
 
@@ -20,6 +23,9 @@ include("templates/head.php");
     <p>
         Create your pages in  the web root:
         <pre>
+            $page_title = "Name Your Pages";
+            $meta_description = "Describe this page.";
+            $meta_keywords = "give, us, a few, keywords";
             &lt;?php include("templates/head.php") ?&gt;
 
             [grid layout / page markup and content]
