@@ -26,6 +26,14 @@ list($page_name, $page_extension) = explode(".", basename($_SERVER["PHP_SELF"]))
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="<?php printf("%s", $meta_description) ?>">
         <meta name="keywords" content="<?php printf("%s", $meta_keywords) ?>">
+
+        <meta property="og:title" content="<?php echo $page_title ?>">
+        <meta property="og:site_name" content="<?php echo $site_name ?>">
+        <meta property="og:description" content="<?php echo $meta_description ?>">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="<?php printf("%s/%s.%s", WWW_ROOT, $page_name, $page_extension) ?>">
+        <meta property="og:image" content="<?php echo WWW_ROOT ?>/images/og-logo.jpg">
+
         <!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->

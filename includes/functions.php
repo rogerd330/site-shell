@@ -6,6 +6,8 @@
  * 11/16/12 11:22 PM
  */
 
+define("WWW_ROOT", sprintf("%s%s", Site::getDomain(), Site::getPath()));
+
 function debug($data) {
     echo "<pre>";
     var_dump($data);
@@ -60,5 +62,24 @@ class Site {
             self::$scripts = array();
         }
         self::$scripts[] = $js;
+    }
+
+    public static function getDomain() {
+        $protocol = empty($_SERVER["HTTPS"]) ? 'http' : 'https';
+        return sprintf("%s://%s", $protocol, $_SERVER["SERVER_NAME"]);
+    }
+
+    public static function getPath() {
+        $parts = explode("/", $_SERVER["PHP_SELF"]);
+        if (count($parts) > 0) {
+            $r = "";
+            for ($i = 1; $i < count($parts) - 1; $i++) {
+                $r .= sprintf("/%s", $parts[$i]);
+            }
+            return $r;
+        }
+        else {
+            return "";
+        }
     }
 }
