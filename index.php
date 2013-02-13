@@ -36,7 +36,9 @@ include("templates/head.php");
 </div>
 
 <div class="grid_6">
-    It uses <a href="http://960.gs/" target="_blank">960.gs</a> for the layout.
+    <p>
+        It uses <a href="http://960.gs/" target="_blank">960.gs</a> for the layout and <a href="http://jquery.com/" target="_blank">jQuery</a> for your scripting needs.
+    </p>
 </div>
 
 <div class="clear"></div>
